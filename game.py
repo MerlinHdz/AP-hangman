@@ -8,19 +8,18 @@ def word_generator(level, word_list):
     # return a word based on it. 
     word_random = ''
     
-    if level == "E": #4-5 characters
-        while len(word_random) not in range(3,6):
+    if level == "E": #3-5 characters
+        while len(word_random) not in range(3,5):
             word_random = random.choice(word_list)
-            return word_random.upper()
-    if level == "M": #6-9
+        return word_random.upper()
+    elif level == "M": #6-9
         while len(word_random) not in range(6,10):
             word_random = random.choice(word_list)
-            return word_random.upper()
-    if level == "H": #10+
+        return word_random.upper()
+    elif level == "H": #10+
         while len(word_random) < 10:
             word_random = random.choice(word_list)
-            return word_random.upper()
-    
+        return word_random.upper()
     else: # If none of the above work (the user types something else) it'll return a random word. 
         word_random = random.choice(word_list).upper()
         return word_random
