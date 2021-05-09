@@ -9,7 +9,7 @@ def word_generator(level, word_list):
     word_random = ''
     
     if level == "E": #3-5 characters
-        while len(word_random) not in range(3,5):
+        while len(word_random) not in range(3,6):
             word_random = random.choice(word_list)
         return word_random.upper()
     elif level == "M": #6-9
